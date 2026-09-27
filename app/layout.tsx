@@ -45,10 +45,10 @@ export const metadata: Metadata = {
     siteName: "Mercadinho do Giovan",
     images: [
       {
-        url: "/logo.png",
-        width: 1080,
-        height: 1080,
-        alt: "Logo do Mercadinho do Giovan",
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Mercadinho do Giovan",
       },
     ],
     locale: "pt_BR",
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title,
     description,
-    images: ["/logo.png"],
+    images: ["/og-image.png"],
   },
 };
 
