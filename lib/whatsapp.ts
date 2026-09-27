@@ -6,6 +6,9 @@ export function buildWhatsappLink(phone: string, message: string = WHATSAPP_DEFA
   return `https://wa.me/${digits}?text=${encodeURIComponent(message)}`;
 }
 
+export const INSTAGRAM_URL = "https://www.instagram.com/mercadinho_do_giovan";
+export const INSTAGRAM_HANDLE = "@mercadinho_do_giovan";
+
 export const CONTACTS = {
   giovan: {
     name: "Giovan",

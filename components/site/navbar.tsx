@@ -2,7 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { buildWhatsappLink, CONTACTS } from "@/lib/whatsapp";
+import { InstagramIcon } from "@/components/site/icons";
+import { buildWhatsappLink, CONTACTS, INSTAGRAM_URL } from "@/lib/whatsapp";
 
 const NAV_LINKS = [
   { label: "Início", href: "#inicio" },
@@ -42,20 +43,31 @@ export function Navbar() {
           ))}
         </nav>
 
-        <Button
-          render={
-            <a
-              href={buildWhatsappLink(CONTACTS.giovan.whatsapp)}
-              target="_blank"
-              rel="noopener noreferrer"
-            />
-          }
-          className="bg-brand-yellow text-brand-blue-dark font-semibold hover:bg-brand-yellow-dark"
-        >
-          <MessageCircle className="size-4" />
-          <span className="hidden sm:inline">Fale no WhatsApp</span>
-          <span className="sm:hidden">WhatsApp</span>
-        </Button>
+        <div className="flex items-center gap-3">
+          <a
+            href={INSTAGRAM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram do Mercadinho do Giovan"
+            className="flex size-9 items-center justify-center rounded-full text-white/90 transition-colors hover:text-brand-yellow"
+          >
+            <InstagramIcon className="size-5" />
+          </a>
+          <Button
+            render={
+              <a
+                href={buildWhatsappLink(CONTACTS.giovan.whatsapp)}
+                target="_blank"
+                rel="noopener noreferrer"
+              />
+            }
+            className="bg-brand-yellow text-brand-blue-dark font-semibold hover:bg-brand-yellow-dark"
+          >
+            <MessageCircle className="size-4" />
+            <span className="hidden sm:inline">Fale no WhatsApp</span>
+            <span className="sm:hidden">WhatsApp</span>
+          </Button>
+        </div>
       </div>
     </header>
   );

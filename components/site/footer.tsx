@@ -1,7 +1,8 @@
 import Image from "next/image";
 import { MessageCircle } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
-import { buildWhatsappLink, CONTACTS } from "@/lib/whatsapp";
+import { InstagramIcon } from "@/components/site/icons";
+import { buildWhatsappLink, CONTACTS, INSTAGRAM_HANDLE, INSTAGRAM_URL } from "@/lib/whatsapp";
 
 const ADDRESS =
   "Rua Bronislau Chycalski, 304, São Francisco, Reserva - PR, 84320-000";
@@ -51,6 +52,15 @@ export function Footer() {
                 {contact.name} · {contact.phone}
               </a>
             ))}
+            <a
+              href={INSTAGRAM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-sm text-white/80 hover:text-brand-yellow"
+            >
+              <InstagramIcon className="size-4" />
+              {INSTAGRAM_HANDLE}
+            </a>
           </div>
         </div>
 

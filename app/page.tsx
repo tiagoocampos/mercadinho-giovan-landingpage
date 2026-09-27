@@ -4,6 +4,7 @@ import { About } from "@/components/site/about";
 
 import { Differentials } from "@/components/site/differentials";
 import { Contact } from "@/components/site/contact";
+import { InstagramBanner } from "@/components/site/instagram-banner";
 import { Location } from "@/components/site/location";
 import { Footer } from "@/components/site/footer";
 import { WhatsappFloat } from "@/components/site/whatsapp-float";
@@ -19,6 +20,7 @@ export default function Home() {
         
         <Differentials />
         <Contact />
+        <InstagramBanner />
         <Location />
       </main>
       <Footer />
