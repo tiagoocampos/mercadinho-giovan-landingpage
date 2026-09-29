@@ -3,6 +3,7 @@ import { Hero } from "@/components/site/hero";
 import { About } from "@/components/site/about";
 
 import { Differentials } from "@/components/site/differentials";
+import { Baskets } from "@/components/site/baskets";
 import { Contact } from "@/components/site/contact";
 import { InstagramBanner } from "@/components/site/instagram-banner";
 import { Location } from "@/components/site/location";
@@ -19,6 +20,7 @@ export default function Home() {
         <About />
         
         <Differentials />
+        <Baskets />
         <Contact />
         <InstagramBanner />
         <Location />
